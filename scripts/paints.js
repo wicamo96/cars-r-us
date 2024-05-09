@@ -2,8 +2,8 @@ import { setPaint } from "./transientState.js";
 
 // Define a function to change the paintId in the transientState
 const handlePaintChange = (changeEvent) => {
-    // Check the name in the state of what was clicked
-    if (changeEvent.target.name === 'paint') {
+    // Check the id in the state of what was clicked
+    if (changeEvent.target.id === 'paintDropdown') {
         // Grab id from the state of what was changed and parseInt
         const convertedToInteger = parseInt(changeEvent.target.value);
         // Invoke function defined in the transientState module to change the paintId to the one we just parsed
@@ -17,6 +17,7 @@ export const paints = async () => {
     // Convert to JS object and store in paints variable
     const paints = await fetchResponse.json();
 
+    // Define an event listener that handles a change to paint selection    
     document.addEventListener("change", handlePaintChange);
 
     // Begin building dropdown to insert info about paint colors from db

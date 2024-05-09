@@ -1,8 +1,25 @@
+import { setInterior } from "./transientState.js";
+
+// Define a function that changes interiorId in transient state
+const handleInteriorChange = (changeEvent) => {
+    // Check the id in the state of what was clicked
+    if (changeEvent.target.id === 'interiorDropdown') {
+        // Grab id from the state of what was changed and parseInt
+        const convertedToInteger = parseInt(changeEvent.target.value);
+
+        // Invoke function defined in the transientState module to change the paintId to the one we just parsed
+        setInterior(convertedToInteger)
+    }
+}
+
 export const interiors = async () => {
     // Fetch info about interiors from db
     const fetchResponse = await fetch("http://localhost:8088/interior");
     // Convert info into JS object
     const interiors = await fetchResponse.json();
+
+    // Define an event listener that handles a change to interior selection
+    document.addEventListener("change", handleInteriorChange);
 
     // Begin building a dropdown
     let interiorHTML = `<select id="interiorDropdown">
