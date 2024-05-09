@@ -6,7 +6,7 @@ export const interiors = async () => {
 
     // Begin building a dropdown
     let interiorHTML = `<select id="interiorDropdown">
-                            <option value="0">Select Interior Option</option>`;
+                            <option selected="true" disabled="disabled" value="0">Select Interior Option</option>`;
 
     // Use .map() method to copy array pulled from db and add to the dropdown                            
     const arrayCopy = interiors.map((interior) => {

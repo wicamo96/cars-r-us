@@ -6,7 +6,7 @@ export const paints = async () => {
 
     // Begin building dropdown to insert info about paint colors from db
     let paintsHTML = `<select id="paintDropdown">
-                        <option value="0">Select A Color</option>`;
+                        <option selected="true" disabled="disabled" value="0">Select A Color</option>`;
 
     // Use .map() method to copy array pulled from db and add to the dropdown
     let arrayCopy = paints.map((paint) => {
