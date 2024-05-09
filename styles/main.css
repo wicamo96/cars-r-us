@@ -1,0 +1,10 @@
+.flexCard {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexContent {
+    display: flex;
+    flex-direction: row;
+
+}
