@@ -1,19 +1,19 @@
 // Set up the transient state data structure and provide initial values
 const transientState = {
-    "paintId": 0,
-    "interiorId": 0,
+    "paintsId": 0,
+    "interiorsId": 0,
     "wheelsId": 0,
-    "technologyId": 0
+    "technologiesId": 0
 }
 
 // Functions that modify each property of transient state
 export const setPaint = (chosenPaint) => {
-    transientState.paintId = chosenPaint;
+    transientState.paintsId = chosenPaint;
     console.log(transientState);
 }
 
 export const setInterior = (chosenInterior) => {
-    transientState.interiorId = chosenInterior;
+    transientState.interiorsId = chosenInterior;
     console.log(transientState);
 }
 
@@ -23,7 +23,7 @@ export const setWheels = (chosenWheels) => {
 }
 
 export const setTechnology = (chosenTechnology) => {
-    transientState.technologyId = chosenTechnology;
+    transientState.technologiesId = chosenTechnology;
     console.log(transientState);
 }
 

@@ -1,6 +1,6 @@
 export const orderList = async () => {
     // Fetch data from db
-    const fetchResponse = await fetch("http://localhost:8088/orders");
+    const fetchResponse = await fetch("http://localhost:8088/orders?_expand=paints&_expand=interiors&_expand=technologies&_expand=wheels");
     // Format data into JS objects
     const orders = await fetchResponse.json();
 
@@ -9,7 +9,14 @@ export const orderList = async () => {
 
     // Use .map() array method to grab info from the orders array
     const arrayCopy = orders.map((order) => {
-            return `<div class="orderEntry">Order #${order.id}</div>`;
+        let price = order.paints.price + order.interiors.price + order.technologies.price + order.wheels.price;
+        
+            price = price.toLocaleString("en-US", {
+                style: "currency",
+                currency: "USD"
+            })
+
+            return `<div class="orderEntry">Order #${order.id} costs ${price}</div>`;
         }
     )
 
