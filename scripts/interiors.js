@@ -14,7 +14,7 @@ const handleInteriorChange = (changeEvent) => {
 
 export const interiors = async () => {
     // Fetch info about interiors from db
-    const fetchResponse = await fetch("http://localhost:8088/interior");
+    const fetchResponse = await fetch("http://localhost:8088/interiors");
     // Convert info into JS object
     const interiors = await fetchResponse.json();
 

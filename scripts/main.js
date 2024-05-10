@@ -46,12 +46,12 @@ const render = async () => {
             <div id="submit">${save}</div>
         </section>
         
-        <section>
+        <section class="orders">
         ${orders}
         </section>`
 
 }
 
-document.addEventListener("newSubmissionCreated", render)
+document.addEventListener("newOrderCreated", render)
 
 render()

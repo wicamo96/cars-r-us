@@ -13,7 +13,7 @@ const handlePaintChange = (changeEvent) => {
 
 export const paints = async () => {
     // Fetch color info from db
-    const fetchResponse = await fetch("http://localhost:8088/color");
+    const fetchResponse = await fetch("http://localhost:8088/colors");
     // Convert to JS object and store in paints variable
     const paints = await fetchResponse.json();
 

@@ -13,7 +13,7 @@ const handleTechnologyChange = (changeEvent) => {
 
 export const technologies = async () => {
     // Fetch data from db about technologies
-    const fetchResponse = await fetch("http://localhost:8088/technology");
+    const fetchResponse = await fetch("http://localhost:8088/technologies");
     // Convert data to JS object
     const technologies = await fetchResponse.json();
 
