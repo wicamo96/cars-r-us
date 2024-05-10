@@ -9,7 +9,7 @@ export const orderList = async () => {
 
     // Use .map() array method to grab info from the orders array
     const arrayCopy = orders.map((order) => {
-        let price = order.paints.price + order.interiors.price + order.technologies.price + order.wheels.price;
+        let price = (order.paints.price + order.interiors.price + order.technologies.price + order.wheels.price) * order.vehicleTypeId;
         
             price = price.toLocaleString("en-US", {
                 style: "currency",

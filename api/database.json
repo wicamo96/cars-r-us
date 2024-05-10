@@ -89,53 +89,44 @@
   ],
   "orders": [
     {
-      "paintsId": 2,
-      "interiorsId": 3,
-      "wheelsId": 1,
-      "technologiesId": 4,
-      "id": 1
-    },
-    {
-      "paintsId": 3,
-      "interiorsId": 2,
-      "wheelsId": 4,
-      "technologiesId": 4,
-      "id": 2
-    },
-    {
-      "paintsId": 2,
-      "interiorsId": 4,
-      "wheelsId": 2,
-      "technologiesId": 1,
-      "id": 3
-    },
-    {
-      "paintsId": 3,
-      "interiorsId": 3,
-      "wheelsId": 3,
-      "technologiesId": 3,
-      "id": 4
-    },
-    {
-      "paintsId": 3,
-      "interiorsId": 1,
-      "wheelsId": 2,
-      "technologiesId": 2,
-      "id": 5
-    },
-    {
       "paintsId": 1,
       "interiorsId": 1,
       "wheelsId": 1,
       "technologiesId": 1,
-      "id": 6
+      "vehicleTypeId": 1,
+      "id": 1
     },
     {
       "paintsId": 4,
       "interiorsId": 4,
       "wheelsId": 4,
       "technologiesId": 4,
-      "id": 7
+      "vehicleTypeId": 1,
+      "id": 2
+    },
+    {
+      "paintsId": 4,
+      "interiorsId": 4,
+      "wheelsId": 4,
+      "technologiesId": 4,
+      "vehicleTypeId": 2.25,
+      "id": 3
+    },
+    {
+      "paintsId": 2,
+      "interiorsId": 2,
+      "wheelsId": 2,
+      "technologiesId": 2,
+      "vehicleTypeId": 1.5,
+      "id": 4
+    },
+    {
+      "paintsId": 4,
+      "interiorsId": 4,
+      "wheelsId": 4,
+      "technologiesId": 4,
+      "vehicleTypeId": 1.5,
+      "id": 5
     }
   ]
 }

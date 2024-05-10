@@ -3,7 +3,8 @@ const transientState = {
     "paintsId": 0,
     "interiorsId": 0,
     "wheelsId": 0,
-    "technologiesId": 0
+    "technologiesId": 0,
+    "vehicleTypeId": 0
 }
 
 // Functions that modify each property of transient state
@@ -25,6 +26,11 @@ export const setWheels = (chosenWheels) => {
 export const setTechnology = (chosenTechnology) => {
     transientState.technologiesId = chosenTechnology;
     console.log(transientState);
+}
+
+export const setType = (chosenType) => {
+    transientState.vehicleTypeId = chosenType;
+    console.log(transientState)
 }
 
 // Function to convert transient state to permanent state

@@ -39,3 +39,10 @@ h1 {
     color: white; 
     margin-right: 2em;
 }
+
+#vehicleType {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 2em;
+}

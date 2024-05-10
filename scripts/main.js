@@ -3,6 +3,7 @@ import { orderList } from "./orders.js";
 import { paints } from "./paints.js"
 import { saveOrder } from "./saveOrder.js";
 import { technologies } from "./technologies.js";
+import { vehicleType } from "./vehicleType.js";
 import { wheels } from "./wheels.js";
 
 const container = document.querySelector("#container")
@@ -15,6 +16,7 @@ const render = async () => {
     const technology = await technologies();
     const save = await saveOrder();
     const orders = await orderList();
+    const type = await vehicleType();
 
     container.innerHTML = `
     <h1>Cars 'R Us: Personal Car Builder</h1>
@@ -42,6 +44,11 @@ const render = async () => {
             </article>
         </section>
         
+        <section id='vehicleType'>
+            <h3>Type:</h3>
+            <div>${type}</div>
+        </section>
+
         <section class='flexButton'>
             <div id="submit">${save}</div>
         </section>
